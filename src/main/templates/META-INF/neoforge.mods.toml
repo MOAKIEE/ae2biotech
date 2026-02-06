@@ -70,8 +70,8 @@ config="${mod_id}.mixins.json"
     type="required" #mandatory
     # Optional field describing why the dependency is required or why it is incompatible
     # reason="..."
-    # The version range of the dependency
-    versionRange="[${neo_version},)" #mandatory
+    # The version range of the dependency - using lower version for better compatibility
+    versionRange="[21.1.0,)"
     # An ordering relationship for the dependency.
     # BEFORE - This mod is loaded BEFORE the dependency
     # AFTER - This mod is loaded AFTER the dependency
@@ -93,3 +93,13 @@ config="${mod_id}.mixins.json"
 # stop your mod loading on the server for example.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+
+# Applied Energistics 2 dependency - required for this mod to function
+[[dependencies.${mod_id}]]
+    modId="ae2"
+    type="required"
+    reason="This mod is an addon for Applied Energistics 2"
+    versionRange="[19.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
