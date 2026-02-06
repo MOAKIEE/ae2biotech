@@ -1,0 +1,13 @@
+{
+  "itemGroup.ae2biotech": "Example Mod Tab",
+  "block.ae2biotech.example_block": "Example Block",
+  "item.ae2biotech.example_item": "Example Item",
+
+  "ae2biotech.configuration.title": "AE2 Bio-Technology Configs",
+  "ae2biotech.configuration.section.ae2biotech.common.toml": "AE2 Bio-Technology Configs",
+  "ae2biotech.configuration.section.ae2biotech.common.toml.title": "AE2 Bio-Technology Configs",
+  "ae2biotech.configuration.items": "Item List",
+  "ae2biotech.configuration.logDirtBlock": "Log Dirt Block",
+  "ae2biotech.configuration.magicNumberIntroduction": "Magic Number Text",
+  "ae2biotech.configuration.magicNumber": "Magic Number"
+}
