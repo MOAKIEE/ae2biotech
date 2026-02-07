@@ -42,6 +42,9 @@ public class AE2BiotechCreativeTab {
                         
                         // Encrypted Bio-Data Chip
                         output.accept(AE2BiotechItems.ENCRYPTED_BIO_DATA_CHIP.get());
+                        
+                        // Bio-Data Chip
+                        output.accept(AE2BiotechItems.BIO_DATA_CHIP.get());
                     })
                     .build());
 }

@@ -1,6 +1,7 @@
 package com.moakiee.ae2biotech.item;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.moakiee.ae2biotech.component.EntityData;
 import com.moakiee.ae2biotech.init.AE2BiotechComponents;
@@ -124,7 +125,8 @@ public class BioScannerItem extends AEBaseItem implements IAEItemPowerStorage {
                 encryptedChip.set(AE2BiotechComponents.ENTITY_DATA, new EntityData(
                         EntityType.getKey(target.getType()),
                         entityNbt,
-                        target.getDisplayName()
+                        target.getDisplayName(),
+                        UUID.randomUUID()
                 ));
                 
                 // Give chip to player
@@ -147,6 +149,14 @@ public class BioScannerItem extends AEBaseItem implements IAEItemPowerStorage {
         return stack;
     }
     
+    @Override
+    public void releaseUsing(ItemStack stack, Level level, LivingEntity livingEntity, int timeCharged) {
+        stack.remove(AE2BiotechComponents.SCAN_TARGET_ID);
+        if (!level.isClientSide && livingEntity instanceof Player player) {
+            player.displayClientMessage(Component.translatable("message.ae2biotech.scan_cancelled"), true);
+        }
+    }
+
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity entity) {
         return 100; // 5 seconds

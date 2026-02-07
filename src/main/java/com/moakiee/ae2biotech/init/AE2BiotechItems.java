@@ -1,6 +1,7 @@
 package com.moakiee.ae2biotech.init;
 
 import com.moakiee.ae2biotech.AE2BioTechnology;
+import com.moakiee.ae2biotech.item.BioDataChipItem;
 import com.moakiee.ae2biotech.item.BioScannerItem;
 import com.moakiee.ae2biotech.item.BlankBioDataChipItem;
 import com.moakiee.ae2biotech.item.EncryptedBioDataChipItem;
@@ -32,6 +33,12 @@ public class AE2BiotechItems {
     public static final DeferredItem<EncryptedBioDataChipItem> ENCRYPTED_BIO_DATA_CHIP = ITEMS.register(
             "encrypted_bio_data_chip",
             () -> new EncryptedBioDataChipItem(new Item.Properties())
+    );
+
+    // Bio-Data Chip: Decrypted, usable chip with entity data
+    public static final DeferredItem<BioDataChipItem> BIO_DATA_CHIP = ITEMS.register(
+            "bio_data_chip",
+            () -> new BioDataChipItem(new Item.Properties())
     );
 }
 

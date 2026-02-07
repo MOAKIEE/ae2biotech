@@ -1,8 +1,11 @@
 package com.moakiee.ae2biotech.component;
 
+import java.util.UUID;
+
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
+import net.minecraft.core.UUIDUtil;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -18,17 +21,20 @@ import net.minecraft.resources.ResourceLocation;
  * - entityType: The entity type ID (e.g., "minecraft:zombie")
  * - entityNbt: Complete NBT data of the entity for exact replication
  * - displayName: The display name shown in tooltips
+ * - chipId: Unique identifier for this chip
  */
 public record EntityData(
     ResourceLocation entityType,
     CompoundTag entityNbt,
-    Component displayName
+    Component displayName,
+    UUID chipId
 ) {
     
     public static final Codec<EntityData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ResourceLocation.CODEC.fieldOf("entity_type").forGetter(EntityData::entityType),
             CompoundTag.CODEC.fieldOf("entity_nbt").forGetter(EntityData::entityNbt),
-            ComponentSerialization.CODEC.fieldOf("display_name").forGetter(EntityData::displayName)
+            ComponentSerialization.CODEC.fieldOf("display_name").forGetter(EntityData::displayName),
+            UUIDUtil.CODEC.fieldOf("chip_id").forGetter(EntityData::chipId)
     ).apply(instance, EntityData::new));
     
     public static final StreamCodec<RegistryFriendlyByteBuf, EntityData> STREAM_CODEC = StreamCodec.composite(
@@ -38,6 +44,8 @@ public record EntityData(
             EntityData::entityNbt,
             ComponentSerialization.STREAM_CODEC,
             EntityData::displayName,
+            UUIDUtil.STREAM_CODEC,
+            EntityData::chipId,
             EntityData::new
     );
 }

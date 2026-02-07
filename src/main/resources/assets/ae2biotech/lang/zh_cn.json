@@ -3,12 +3,15 @@
     "item.ae2biotech.bio_scanner": "生物扫描仪",
     "item.ae2biotech.blank_bio_data_chip": "空白的生物数据芯片",
     "item.ae2biotech.encrypted_bio_data_chip": "加密的生物数据芯片",
+    "item.ae2biotech.bio_data_chip": "生物数据芯片",
     "tooltip.ae2biotech.entity_type": "生物：",
-    "tooltip.ae2biotech.encrypted": "已加密",
+    "tooltip.ae2biotech.chip_id": "UUID: ",
     "tooltip.ae2biotech.no_data": "无数据",
     "message.ae2biotech.low_energy": "能量不足",
     "message.ae2biotech.missing_chip": "缺少空白生物数据芯片",
     "message.ae2biotech.scan_started": "扫描中...",
     "message.ae2biotech.scan_failed_moved": "扫描失败：目标丢失",
-    "message.ae2biotech.scan_complete": "扫描完成"
+    "message.ae2biotech.scan_complete": "扫描完成",
+    "message.ae2biotech.scan_cancelled": "扫描已取消",
+    "message.ae2biotech.decrypt_complete": "解密完成"
 }

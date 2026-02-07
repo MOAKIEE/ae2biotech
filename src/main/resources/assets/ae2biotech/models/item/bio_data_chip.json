@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "ae2biotech:item/bio_data_chip"
+    }
+}
