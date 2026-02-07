@@ -29,6 +29,9 @@ public class AE2BioTechnology {
         // Register creative mode tab
         AE2BiotechCreativeTab.CREATIVE_TABS.register(modEventBus);
         
+        // Register data components
+        com.moakiee.ae2biotech.init.AE2BiotechComponents.DATA_COMPONENTS.register(modEventBus);
+        
         LOGGER.info("AE2 Bio-Technology initializing...");
     }
 }

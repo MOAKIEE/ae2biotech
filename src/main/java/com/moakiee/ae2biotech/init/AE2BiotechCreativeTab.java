@@ -36,6 +36,12 @@ public class AE2BiotechCreativeTab {
                                 AE2BiotechItems.BIO_SCANNER.get().getAEMaxPower(chargedScanner), 
                                 Actionable.MODULATE);
                         output.accept(chargedScanner);
+                        
+                        // Blank Bio-Data Chip
+                        output.accept(AE2BiotechItems.BLANK_BIO_DATA_CHIP.get());
+                        
+                        // Encrypted Bio-Data Chip
+                        output.accept(AE2BiotechItems.ENCRYPTED_BIO_DATA_CHIP.get());
                     })
                     .build());
 }

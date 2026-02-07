@@ -1,4 +1,14 @@
 {
   "itemGroup.ae2biotech.main": "AE2 Bio-Technology",
-  "item.ae2biotech.bio_scanner": "Bio-Scanner"
+  "item.ae2biotech.bio_scanner": "Bio-Scanner",
+  "item.ae2biotech.blank_bio_data_chip": "Blank Bio-Data Chip",
+  "item.ae2biotech.encrypted_bio_data_chip": "Encrypted Bio-Data Chip",
+  "tooltip.ae2biotech.entity_type": "Entity: ",
+  "tooltip.ae2biotech.encrypted": "Encrypted",
+  "tooltip.ae2biotech.no_data": "No Data",
+  "message.ae2biotech.low_energy": "Low Energy",
+  "message.ae2biotech.missing_chip": "Missing Blank Bio-Data Chip",
+  "message.ae2biotech.scan_started": "Scanning...",
+  "message.ae2biotech.scan_failed_moved": "Scan Failed: Target Lost",
+  "message.ae2biotech.scan_complete": "Scan Complete"
 }
